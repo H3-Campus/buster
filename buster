@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#Backup repository et mise en place des nouvelles
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+cp source.list /etc/apt/sources.list
+
+#Mise à jour
+sudo apt update && sudo apt upgrade -y
+sudo apt dist-upgrade -y
+sudo reboot
+
